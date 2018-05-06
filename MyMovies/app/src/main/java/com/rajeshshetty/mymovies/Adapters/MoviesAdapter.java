@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.rajeshshetty.mymovies.Activity.DetailsActivity;
@@ -28,19 +29,20 @@ public class MoviesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public MoviesAdapter(Context context, ArrayList<Movies> movies_list){
         this.context = context;
         this.moviesList = movies_list;
-
     }
 
     class MovieViewHolder extends RecyclerView.ViewHolder {
         ImageView moviePosterImageView;
         TextView moviewTitle;
         RatingBar mRatingBar;
+        RelativeLayout itemLayout;
 
         public MovieViewHolder(View itemView) {
             super(itemView);
             this.moviePosterImageView = (ImageView) itemView.findViewById(R.id.movie_poster_imageview);
             this.moviewTitle = (TextView) itemView.findViewById(R.id.movie_title);
             this.mRatingBar=itemView.findViewById(R.id.ratingbar);
+            this.itemLayout=itemView.findViewById(R.id.item_layout);
         }
     }
 
@@ -67,14 +69,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         GlideApp.with(context).load(AppConstants.IMAGE_BASE_URL_W780+moviesList.get(position).getPoster_path()).into(movieViewHolder.moviePosterImageView);
         movieViewHolder.mRatingBar.setRating(moviesList.get(position).getVote_average()/2);
 
-        movieViewHolder.moviePosterImageView.setOnClickListener(new View.OnClickListener() {
+        movieViewHolder.itemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent=new Intent(context, DetailsActivity.class);
                 intent.putExtra(DetailsActivity.MOVIE_KEY,moviesList.get(position));
                 context.startActivity(intent);
-
             }
         });
 

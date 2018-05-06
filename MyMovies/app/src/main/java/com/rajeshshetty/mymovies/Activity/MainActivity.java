@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        this.setSupportActionBar(toolbar
-        );
+        this.setSupportActionBar(toolbar);
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setTitle(getString(R.string.activity_moview_title));
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                         mRecyclerview.setVisibility(View.INVISIBLE);
                         setPlaceHolderValue(getString(R.string.no_content),getResources().getDrawable(R.drawable.no_content));
                     }
-
                 }
 
                 @Override

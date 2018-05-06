@@ -56,13 +56,21 @@
                     android:id="@+id/ratingbar"
                     android:rating="3.5"
                     android:stepSize="0.1"
-                    android:numStars="5"
+                    android:numStars="@integer/no_of_stars"
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
         </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"/>
+
     </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

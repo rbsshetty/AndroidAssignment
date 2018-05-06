@@ -2,7 +2,6 @@ package com.rajeshshetty.mymovies.Network;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Movie;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
@@ -12,7 +11,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rajeshshetty.mymovies.AppConstants;
@@ -114,7 +112,6 @@ public class APIManager {
 
 
     public void removeRequest(String Tag){
-
         if (mRequestQueue != null) {
             mRequestQueue.cancelAll(Tag);
         }
@@ -122,12 +119,10 @@ public class APIManager {
 
 
     public String getBaseUrlFromPreference(){
-
         return AppConstants.BASE_URL;
     }
 
     public String getAPIKey(){
-
         return "b05a4a2bf18b75f175c229c141d7f6b8";
     }
 

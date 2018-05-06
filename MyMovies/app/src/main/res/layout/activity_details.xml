@@ -28,35 +28,26 @@
 
         <TextView
             android:id="@+id/title_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/DetailsTextStyle"
             android:textColor="@color/black"
-            android:layout_marginLeft="@dimen/details_screen_margin"
-            android:layout_marginRight="@dimen/details_screen_margin"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/title_top_margin"
             android:textSize="@dimen/title_size"
-            android:maxLines="2"
+            android:maxLines="@integer/max_title_lines"
             android:ellipsize="end"/>
 
         <TextView
             android:id="@+id/desc_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/DetailsTextStyle"
             android:textColor="@color/black_200"
-            android:layout_marginLeft="@dimen/details_screen_margin"
-            android:layout_marginRight="@dimen/details_screen_margin"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/desc_top_margin"
             android:lineSpacingExtra="2dp"/>
 
 
         <TextView
             android:id="@+id/date_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/DetailsTextStyle"
             android:textColor="@color/black"
-            android:layout_marginLeft="@dimen/details_screen_margin"
-            android:layout_marginRight="@dimen/details_screen_margin"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="@dimen/date_top_margin"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -73,9 +64,8 @@
             <RatingBar
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:id="@+id/details_ratingbar"
-                android:rating="3.5"
                 android:stepSize="0.1"
-                android:numStars="5"
+                android:numStars="@integer/no_of_stars"
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

@@ -11,4 +11,7 @@
     <dimen name="rating_bar_top_margin">10dp</dimen>
     <dimen name="placeholder_textsize">16sp</dimen>
     <dimen name="placeholder_image_width">100dp</dimen>
+    <dimen name="title_top_margin">8dp</dimen>
+    <dimen name="desc_top_margin">5dp</dimen>
+    <dimen name="date_top_margin">12dp</dimen>
 </resources>

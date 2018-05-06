@@ -1,6 +1,5 @@
 package com.rajeshshetty.mymovies.Activity;
 
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -41,16 +40,16 @@ public class DetailsActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setTitle("");
 
-
         movies=(Movies)getIntent().getParcelableExtra(MOVIE_KEY);
-
+        setData();
+    }
+    private void setData(){
         GlideApp.with(getApplicationContext()).load(AppConstants.IMAGE_BASE_URL_W780+movies.getPoster_path()).into(posterImageView);
         titleTextView.setText(movies.getOriginal_title());
         descTextView.setText(movies.getOverview());
         voteTextView.setText(movies.getVote_count()+" votes");
         dateTextView.setText("Released: "+movies.getRelease_date());
         ratingBar.setRating(movies.getVote_average()/2);
-
     }
 
     @Override
