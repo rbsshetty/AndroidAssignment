@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setPlaceHolderValue(String Text, Drawable drawable){
+        mSwipeRefresh.setRefreshing(false);
         placeholderTextView.setText(Text);
         placeholderImageView.setImageDrawable(drawable);
     }
