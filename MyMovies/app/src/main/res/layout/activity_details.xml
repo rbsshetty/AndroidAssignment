@@ -8,6 +8,9 @@
     tools:context=".Activity.DetailsActivity">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,6 +42,7 @@
             android:id="@+id/desc_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black_200"
             android:layout_marginLeft="@dimen/details_screen_margin"
             android:layout_marginRight="@dimen/details_screen_margin"
             android:layout_marginTop="5dp"
@@ -49,6 +53,7 @@
             android:id="@+id/date_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginLeft="@dimen/details_screen_margin"
             android:layout_marginRight="@dimen/details_screen_margin"
             android:layout_marginTop="12dp"/>
@@ -63,7 +68,8 @@
             <TextView
                 android:id="@+id/vote_textview"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
             <RatingBar
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:id="@+id/details_ratingbar"
@@ -75,7 +81,7 @@
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
     </LinearLayout>
-
+    </ScrollView>
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
