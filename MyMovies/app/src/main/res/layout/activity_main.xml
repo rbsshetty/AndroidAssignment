@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/placeholder_layout"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img_network_error"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/placeholder_image_width"
+            android:layout_height="@dimen/placeholder_image_width"
+            android:visibility="invisible"
+            app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+        <TextView
+            android:id="@+id/network_error"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/img_network_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network error"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="italic|bold"
+            android:textSize="@dimen/placeholder_textsize"
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

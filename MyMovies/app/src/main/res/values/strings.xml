@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMovies</string>
+    <string name="activity_moview_title">Movies</string>
+    <string name="no_content">No Content.</string>
+    <string name="server_error">Error Occurred.Please try again.</string>
+    <string name="no_network">No Intenet Connection.</string>
+</resources>

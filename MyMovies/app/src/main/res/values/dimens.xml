@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_item_cardview_margin">5dp</dimen>
+    <dimen name="movie_item_cardview_radius">0dp</dimen>
+    <dimen name="movie_item_cardview_elevation">0dp</dimen>
+    <dimen name="details_screen_margin">20dp</dimen>
+    <dimen name="details_image_height">230dp</dimen>
+    <dimen name="title_size">22sp</dimen>
+    <dimen name="list_item_height">180dp</dimen>
+    <dimen name="list_item_title_size">20sp</dimen>
+    <dimen name="rating_bar_top_margin">10dp</dimen>
+    <dimen name="placeholder_textsize">16sp</dimen>
+    <dimen name="placeholder_image_width">100dp</dimen>
+    <dimen name="title_top_margin">8dp</dimen>
+    <dimen name="desc_top_margin">5dp</dimen>
+    <dimen name="date_top_margin">12dp</dimen>
+</resources>
